@@ -1,0 +1,42 @@
+MIT License
+
+Copyright (c) 2016 Querz
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-----------------------------------------------------------------------------------
+The above license does not apply to some images found in src/main/resources/images.
+The following list links the affected images to the corresponding license by
+providing a link to that license.
+
+Filename           Source                                                                                      License
+black_bishop.png   https://en.wikipedia.org/wiki/Chess_piece#/media/File:Chess_bdt45.svg                       https://creativecommons.org/licenses/by-sa/3.0/
+black_king.png     https://en.wikipedia.org/wiki/Chess_piece#/media/File:Chess_kdt45.svg                       https://creativecommons.org/licenses/by-sa/3.0/
+black_knight.png   https://en.wikipedia.org/wiki/Chess_piece#/media/File:Chess_ndt45.svg                       https://creativecommons.org/licenses/by-sa/3.0/
+black_pawn.png     https://en.wikipedia.org/wiki/Chess_piece#/media/File:Chess_pdt45.svg                       https://creativecommons.org/licenses/by-sa/3.0/
+black_queen.png    https://en.wikipedia.org/wiki/Chess_piece#/media/File:Chess_qdt45.svg                       https://creativecommons.org/licenses/by-sa/3.0/
+black_rook.png     https://en.wikipedia.org/wiki/Chess_piece#/media/File:Chess_rdt45.svg                       https://creativecommons.org/licenses/by-sa/3.0/
+white_bishop.png   https://en.wikipedia.org/wiki/Chess_piece#/media/File:Chess_blt45.svg                       https://creativecommons.org/licenses/by-sa/3.0/
+white_king.png     https://en.wikipedia.org/wiki/Chess_piece#/media/File:Chess_klt45.svg                       https://creativecommons.org/licenses/by-sa/3.0/
+white_knight.png   https://en.wikipedia.org/wiki/Chess_piece#/media/File:Chess_nlt45.svg                       https://creativecommons.org/licenses/by-sa/3.0/
+white_pawn.png     https://en.wikipedia.org/wiki/Chess_piece#/media/File:Chess_plt45.svg                       https://creativecommons.org/licenses/by-sa/3.0/
+white_queen.png    https://en.wikipedia.org/wiki/Chess_piece#/media/File:Chess_qlt45.svg                       https://creativecommons.org/licenses/by-sa/3.0/
+white_rook.png     https://en.wikipedia.org/wiki/Chess_piece#/media/File:Chess_rlt45.svg                       https://creativecommons.org/licenses/by-sa/3.0/
+load.png           https://commons.wikimedia.org/wiki/File:Simpleicons_Interface_folder-black-open-shape.svg   https://creativecommons.org/licenses/by/3.0/
+swap.png           https://www.flaticon.com/free-icon/refresh-page-option_25429                                https://creativecommons.org/licenses/by/3.0/

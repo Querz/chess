@@ -1,0 +1,167 @@
+{
+  "current_turn": 1,
+  "black": [
+    {
+      "first_turn": -1,
+      "pos": "a8",
+      "type": "rook"
+    },
+    {
+      "first_turn": -1,
+      "pos": "b8",
+      "type": "knight"
+    },
+    {
+      "first_turn": -1,
+      "pos": "c8",
+      "type": "bishop"
+    },
+    {
+      "first_turn": -1,
+      "pos": "d8",
+      "type": "queen"
+    },
+    {
+      "first_turn": -1,
+      "pos": "e8",
+      "type": "king"
+    },
+    {
+      "first_turn": -1,
+      "pos": "f8",
+      "type": "bishop"
+    },
+    {
+      "first_turn": -1,
+      "pos": "g8",
+      "type": "knight"
+    },
+    {
+      "first_turn": -1,
+      "pos": "h8",
+      "type": "rook"
+    },
+    {
+      "first_turn": -1,
+      "pos": "a7",
+      "type": "pawn"
+    },
+    {
+      "first_turn": -1,
+      "pos": "b7",
+      "type": "pawn"
+    },
+    {
+      "first_turn": -1,
+      "pos": "c7",
+      "type": "pawn"
+    },
+    {
+      "first_turn": -1,
+      "pos": "d7",
+      "type": "pawn"
+    },
+    {
+      "first_turn": -1,
+      "pos": "e7",
+      "type": "pawn"
+    },
+    {
+      "first_turn": -1,
+      "pos": "f7",
+      "type": "pawn"
+    },
+    {
+      "first_turn": -1,
+      "pos": "g7",
+      "type": "pawn"
+    },
+    {
+      "first_turn": -1,
+      "pos": "h7",
+      "type": "pawn"
+    }
+  ],
+  "white": [
+    {
+      "first_turn": -1,
+      "pos": "a1",
+      "type": "rook"
+    },
+    {
+      "first_turn": -1,
+      "pos": "b1",
+      "type": "knight"
+    },
+    {
+      "first_turn": -1,
+      "pos": "c1",
+      "type": "bishop"
+    },
+    {
+      "first_turn": -1,
+      "pos": "d1",
+      "type": "queen"
+    },
+    {
+      "first_turn": -1,
+      "pos": "e1",
+      "type": "king"
+    },
+    {
+      "first_turn": -1,
+      "pos": "f1",
+      "type": "bishop"
+    },
+    {
+      "first_turn": -1,
+      "pos": "g1",
+      "type": "knight"
+    },
+    {
+      "first_turn": -1,
+      "pos": "h1",
+      "type": "rook"
+    },
+    {
+      "first_turn": -1,
+      "pos": "a2",
+      "type": "pawn"
+    },
+    {
+      "first_turn": -1,
+      "pos": "b2",
+      "type": "pawn"
+    },
+    {
+      "first_turn": -1,
+      "pos": "c2",
+      "type": "pawn"
+    },
+    {
+      "first_turn": -1,
+      "pos": "d2",
+      "type": "pawn"
+    },
+    {
+      "first_turn": -1,
+      "pos": "e2",
+      "type": "pawn"
+    },
+    {
+      "first_turn": -1,
+      "pos": "f2",
+      "type": "pawn"
+    },
+    {
+      "first_turn": -1,
+      "pos": "g2",
+      "type": "pawn"
+    },
+    {
+      "first_turn": -1,
+      "pos": "h2",
+      "type": "pawn"
+    }
+  ]
+}
