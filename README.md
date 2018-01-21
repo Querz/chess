@@ -36,9 +36,9 @@ This would create a new instance of [Queen](https://github.com/Querz/chess/blob/
 For serialization, the following methods will return all required information to save an entire Chess game:
 
 - [ChessBoard](https://github.com/Querz/chess/blob/master/src/main/java/net/querz/chess/ChessBoard.java)#getCurrentTurn()
-- [ChessBoard](https://github.com/Querz/chess/blob/master/src/main/java/net/querz/chess/figure/Figure.java)#getName()
-- [ChessBoard](https://github.com/Querz/chess/blob/master/src/main/java/net/querz/chess/figure/Figure.java)#getPos()
-- [ChessBoard](https://github.com/Querz/chess/blob/master/src/main/java/net/querz/chess/figure/Figure.java)#getFirstTurn()
+- [Figure](https://github.com/Querz/chess/blob/master/src/main/java/net/querz/chess/figure/Figure.java)#getName()
+- [Figure](https://github.com/Querz/chess/blob/master/src/main/java/net/querz/chess/figure/Figure.java)#getPos()
+- [Figure](https://github.com/Querz/chess/blob/master/src/main/java/net/querz/chess/figure/Figure.java)#getFirstTurn()
 
 ---
 
