@@ -11,6 +11,8 @@ A small Chess game implementing the default rules by restricting movement of fig
 - Check mate
 - Stalemate
 
+![chess_default](https://raw.githubusercontent.com/Querz/chess/616ca78d9c6e24668c923a7b2aa6da3b76f48aa3/assets/chess_default.png)
+
 ---
 
 ## Serialization and Deserialization
@@ -37,5 +39,13 @@ For serialization, the following methods will return all required information to
 - [ChessBoard](https://github.com/Querz/chess/blob/master/src/main/java/net/querz/chess/figure/Figure.java)#getName()
 - [ChessBoard](https://github.com/Querz/chess/blob/master/src/main/java/net/querz/chess/figure/Figure.java)#getPos()
 - [ChessBoard](https://github.com/Querz/chess/blob/master/src/main/java/net/querz/chess/figure/Figure.java)#getFirstTurn()
+
+---
+
+## Godmode
+
+The program can be started in a Test-/Godmode by using the program argument "--godmode". This enables several functions to freely control the ChessBoard and the Pieces. Right-clicking a field shows a context menu to add and remove Pieces, and the options menu in the bottom right corner of the window can now clear the ChessBoard and increment the turn counter (therefore switching the player whose turn it is).
+
+![chess_default](https://raw.githubusercontent.com/Querz/chess/616ca78d9c6e24668c923a7b2aa6da3b76f48aa3/assets/chess_godmode.png)
 
 ---
