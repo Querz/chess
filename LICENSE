@@ -25,18 +25,18 @@ The above license does not apply to some images found in src/main/resources/imag
 The following list links the affected images to the corresponding license by
 providing a link to that license.
 
-Filename           Source                                                                                      License
-black_bishop.png   https://en.wikipedia.org/wiki/Chess_piece#/media/File:Chess_bdt45.svg                       https://creativecommons.org/licenses/by-sa/3.0/
-black_king.png     https://en.wikipedia.org/wiki/Chess_piece#/media/File:Chess_kdt45.svg                       https://creativecommons.org/licenses/by-sa/3.0/
-black_knight.png   https://en.wikipedia.org/wiki/Chess_piece#/media/File:Chess_ndt45.svg                       https://creativecommons.org/licenses/by-sa/3.0/
-black_pawn.png     https://en.wikipedia.org/wiki/Chess_piece#/media/File:Chess_pdt45.svg                       https://creativecommons.org/licenses/by-sa/3.0/
-black_queen.png    https://en.wikipedia.org/wiki/Chess_piece#/media/File:Chess_qdt45.svg                       https://creativecommons.org/licenses/by-sa/3.0/
-black_rook.png     https://en.wikipedia.org/wiki/Chess_piece#/media/File:Chess_rdt45.svg                       https://creativecommons.org/licenses/by-sa/3.0/
-white_bishop.png   https://en.wikipedia.org/wiki/Chess_piece#/media/File:Chess_blt45.svg                       https://creativecommons.org/licenses/by-sa/3.0/
-white_king.png     https://en.wikipedia.org/wiki/Chess_piece#/media/File:Chess_klt45.svg                       https://creativecommons.org/licenses/by-sa/3.0/
-white_knight.png   https://en.wikipedia.org/wiki/Chess_piece#/media/File:Chess_nlt45.svg                       https://creativecommons.org/licenses/by-sa/3.0/
-white_pawn.png     https://en.wikipedia.org/wiki/Chess_piece#/media/File:Chess_plt45.svg                       https://creativecommons.org/licenses/by-sa/3.0/
-white_queen.png    https://en.wikipedia.org/wiki/Chess_piece#/media/File:Chess_qlt45.svg                       https://creativecommons.org/licenses/by-sa/3.0/
-white_rook.png     https://en.wikipedia.org/wiki/Chess_piece#/media/File:Chess_rlt45.svg                       https://creativecommons.org/licenses/by-sa/3.0/
-load.png           https://commons.wikimedia.org/wiki/File:Simpleicons_Interface_folder-black-open-shape.svg   https://creativecommons.org/licenses/by/3.0/
-swap.png           https://www.flaticon.com/free-icon/refresh-page-option_25429                                https://creativecommons.org/licenses/by/3.0/
+Filename           Author               Source                                                                  License
+black_bishop.png   Colin M.L. Burnett   https://en.wikipedia.org/wiki/Chess_piece#/media/File:Chess_bdt45.svg   https://creativecommons.org/licenses/by-sa/3.0/
+black_king.png     Colin M.L. Burnett   https://en.wikipedia.org/wiki/Chess_piece#/media/File:Chess_kdt45.svg   https://creativecommons.org/licenses/by-sa/3.0/
+black_knight.png   Colin M.L. Burnett   https://en.wikipedia.org/wiki/Chess_piece#/media/File:Chess_ndt45.svg   https://creativecommons.org/licenses/by-sa/3.0/
+black_pawn.png     Colin M.L. Burnett   https://en.wikipedia.org/wiki/Chess_piece#/media/File:Chess_pdt45.svg   https://creativecommons.org/licenses/by-sa/3.0/
+black_queen.png    Colin M.L. Burnett   https://en.wikipedia.org/wiki/Chess_piece#/media/File:Chess_qdt45.svg   https://creativecommons.org/licenses/by-sa/3.0/
+black_rook.png     Colin M.L. Burnett   https://en.wikipedia.org/wiki/Chess_piece#/media/File:Chess_rdt45.svg   https://creativecommons.org/licenses/by-sa/3.0/
+white_bishop.png   Colin M.L. Burnett   https://en.wikipedia.org/wiki/Chess_piece#/media/File:Chess_blt45.svg   https://creativecommons.org/licenses/by-sa/3.0/
+white_king.png     Colin M.L. Burnett   https://en.wikipedia.org/wiki/Chess_piece#/media/File:Chess_klt45.svg   https://creativecommons.org/licenses/by-sa/3.0/
+white_knight.png   Colin M.L. Burnett   https://en.wikipedia.org/wiki/Chess_piece#/media/File:Chess_nlt45.svg   https://creativecommons.org/licenses/by-sa/3.0/
+white_pawn.png     Colin M.L. Burnett   https://en.wikipedia.org/wiki/Chess_piece#/media/File:Chess_plt45.svg   https://creativecommons.org/licenses/by-sa/3.0/
+white_queen.png    Colin M.L. Burnett   https://en.wikipedia.org/wiki/Chess_piece#/media/File:Chess_qlt45.svg   https://creativecommons.org/licenses/by-sa/3.0/
+white_rook.png     Colin M.L. Burnett   https://en.wikipedia.org/wiki/Chess_piece#/media/File:Chess_rlt45.svg   https://creativecommons.org/licenses/by-sa/3.0/
+load.png           Simpleicon           https://www.flaticon.com/free-icon/folder-black-open-shape_34083        https://creativecommons.org/licenses/by/3.0/
+swap.png           Dave Gandy           https://www.flaticon.com/free-icon/refresh-page-option_25429            https://creativecommons.org/licenses/by/3.0/
