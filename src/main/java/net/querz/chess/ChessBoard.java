@@ -65,14 +65,18 @@ public class ChessBoard extends GridPane {
 
 	void gameStateTest() {
 		King king = getKing(getTurn());
-		if (king.isCheck()) {
-			if (king.isCheckMate()) {
-				ChessGame.displayStatusText("Check mate! " + king.getColor().revert().getFancyName() + " wins.");
+		if (king != null) {
+			if (king.isCheck()) {
+				if (king.isCheckMate()) {
+					ChessGame.displayStatusText("Check mate! " + king.getColor().revert().getFancyName() + " wins.");
+				} else {
+					ChessGame.displayStatusText("Check! " + king.getColor().getFancyName() + " has to defend.");
+				}
+			} else if (king.isStaleMate()) {
+				ChessGame.displayStatusText("Stalemate! " + king.getColor().getFancyName() + " can't move.");
 			} else {
-				ChessGame.displayStatusText("Check! " + king.getColor().getFancyName() + " has to defend.");
+				ChessGame.displayStatusText("");
 			}
-		} else if (king.isStaleMate()) {
-			ChessGame.displayStatusText("Stalemate! " + king.getColor().getFancyName() + " can't move.");
 		} else {
 			ChessGame.displayStatusText("");
 		}
