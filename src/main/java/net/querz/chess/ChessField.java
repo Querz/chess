@@ -33,6 +33,8 @@ public class ChessField extends Label {
 		if (ChessGame.isGodmode()) {
 			setContextMenu(new GodmodeMenu(this));
 		}
+		setMinSize(50, 50);
+		setMaxSize(50, 50);
 	}
 
 	private void setHighlightEmpty() {

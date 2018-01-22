@@ -8,6 +8,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.text.Font;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
@@ -49,45 +50,50 @@ public class ChessGame extends Application {
 		menu.setPadding(new Insets(10, 10, 10, 0));
 
 		//option buttons
-		HBox options = new HBox();
+		GridPane options = new GridPane();
 		options.setAlignment(Pos.BOTTOM_RIGHT);
 
 		//secret option buttons
 		if (godmode) {
-			options.getChildren().add(new OptionButton(
+			options.add(new OptionButton(
 					"images/clear.png",
-					e -> board.clear())
+					e -> board.clear()),
+					0, 0, 1, 1
 			);
-			options.getChildren().add(new OptionButton(
+			options.add(new OptionButton(
 					"images/swap.png",
-					e -> board.nextTurn()
-			));
+					e -> board.nextTurn()),
+					1, 0, 1, 1
+			);
 		}
-		options.getChildren().add(new OptionButton(
+		options.add(new OptionButton(
 				"images/reset.png",
 				e -> {
 					board.clear();
 					board.loadFromResource("init.json");
-				}
-		));
-		options.getChildren().add(new OptionButton(
+				}),
+				2, 0, 1, 1
+		);
+		options.add(new OptionButton(
 				"images/save.png",
 				e -> {
 					File file = createFileChooser().showSaveDialog(primaryStage);
 					if (file != null) {
 						board.save(file);
 					}
-				}
-		));
-		options.getChildren().add(new OptionButton(
+				}),
+				3, 0, 1, 1
+		);
+		options.add(new OptionButton(
 				"images/load.png",
 				e -> {
 					File file = createFileChooser().showOpenDialog(primaryStage);
 					if (file != null) {
 						board.load(file);
 					}
-				}
-		));
+				}),
+				4, 0, 1, 1
+		);
 		menu.setRight(options);
 
 		//status text

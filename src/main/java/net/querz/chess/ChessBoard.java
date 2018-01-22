@@ -18,8 +18,6 @@ public class ChessBoard extends GridPane {
 			int x = getX(i);
 			int y = getY(i);
 			ChessField field = new ChessField(this, x, y);
-			field.setMinSize(50, 50);
-			field.setMaxSize(50, 50);
 			add(field, x, y);
 			fields[i] = field;
 		}
