@@ -17,7 +17,7 @@ A small Chess game implementing the default rules by restricting movement of fig
 
 ## Serialization and Deserialization
 
-The game can be saved and loaded using any String format. The interface [ChessIO](https://github.com/Querz/chess/blob/master/src/main/java/net/querz/chess/ChessIO.java) can be implemented individually and a custom format implemented:
+The game can be saved and loaded using any String format. The interface [ChessIO](https://github.com/Querz/chess/blob/master/src/main/java/net/querz/chess/ChessIO.java) can be used to implement a custom format:
 
 [ChessIO](https://github.com/Querz/chess/blob/master/src/main/java/net/querz/chess/ChessIO.java)#load(String, ChessBoard) is used to load a String (the first parameter) into the ChessBoard (the second parameter).
 
