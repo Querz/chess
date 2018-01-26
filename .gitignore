@@ -5,3 +5,4 @@ build/
 
 # idea gitignore
 .idea/
+out/
