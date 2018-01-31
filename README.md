@@ -7,6 +7,7 @@ A small Chess game implementing the default rules by restricting movement of fig
 - Movement of pieces
 - En passant
 - Castling
+- Promotion
 - Check
 - Check mate
 - Stalemate
