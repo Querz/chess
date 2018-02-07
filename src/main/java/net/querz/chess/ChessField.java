@@ -20,6 +20,17 @@ public class ChessField extends Label {
 	private static final String highlightKillStyleBlack = "-fx-background-color: darkred;";
 	private static final String highlightKillStyleWhite = "-fx-background-color: #ff5555;";
 
+	private static final int dragViewOffset;
+
+	static {
+		String osName = System.getProperty("os.name").toLowerCase();
+		if (osName.contains("windows")) {
+			dragViewOffset = 25;
+		} else {
+			dragViewOffset = 0;
+		}
+	}
+
 	ChessField(ChessBoard board, int x, int y) {
 		this.board = board;
 		this.x = x;
@@ -96,8 +107,8 @@ public class ChessField extends Label {
 		if (figure != null && figure.canMove() && (trueFields = figure.getAllAccessibleFields()).size() > 0) {
 			Dragboard db = startDragAndDrop(TransferMode.MOVE);
 			db.setDragView(figure.getImage());
-			db.setDragViewOffsetX(25);
-			db.setDragViewOffsetY(25);
+			db.setDragViewOffsetX(dragViewOffset);
+			db.setDragViewOffsetY(dragViewOffset);
 			ClipboardContent content = new ClipboardContent();
 			content.put(Figure.CHESS_FIGURE, figure);
 			db.setContent(content);
