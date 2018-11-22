@@ -10,8 +10,8 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
-import net.querz.chess.json.ChessLoader;
 import java.io.File;
+import java.util.ServiceLoader;
 
 public class ChessGame extends Application {
 
@@ -21,7 +21,7 @@ public class ChessGame extends Application {
 	private boolean godmode = false;
 
 	@Override
-	public void start(Stage primaryStage) throws Exception {
+	public void start(Stage primaryStage) {
 		instance = this;
 		godmode = getParameters().getUnnamed().contains("--godmode");
 
@@ -110,8 +110,8 @@ public class ChessGame extends Application {
 		primaryStage.setMinHeight(primaryStage.getHeight());
 
 		//set IO and load initial setup
-		board.setIO(new ChessLoader());
-		board.loadFromResource("init.json");
+		ServiceLoader.load(ChessIO.class).forEach(board::setIO);
+		board.loadFromResource("init.chess");
 	}
 
 	private Label newRowLabel(int i) {
@@ -130,8 +130,8 @@ public class ChessGame extends Application {
 
 	private FileChooser createFileChooser() {
 		FileChooser fileChooser = new FileChooser();
-		ExtensionFilter extFilter = new ExtensionFilter("JSON files (*.json)", "*.json");
-		fileChooser.getExtensionFilters().add(extFilter);
+		board.getIO().forEach((k, v) -> fileChooser.getExtensionFilters().add(
+				new ExtensionFilter(v.getFileTypeDescription(), "*." + v.getFileExtension())));
 		return fileChooser;
 	}
 

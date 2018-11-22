@@ -1,0 +1,36 @@
+current_turn: 1
+fifty_move_rule_turns: 0
+black:
+- {type: rook, pos: a8, first_turn: -1}
+- {type: knight, pos: b8, first_turn: -1}
+- {type: bishop, pos: c8, first_turn: -1}
+- {type: queen, pos: d8, first_turn: -1}
+- {type: king, pos: e8, first_turn: -1}
+- {type: bishop, pos: f8, first_turn: -1}
+- {type: knight, pos: g8, first_turn: -1}
+- {type: rook, pos: h8, first_turn: -1}
+- {type: pawn, pos: a7, first_turn: -1}
+- {type: pawn, pos: b7, first_turn: -1}
+- {type: pawn, pos: c7, first_turn: -1}
+- {type: pawn, pos: d7, first_turn: -1}
+- {type: pawn, pos: e7, first_turn: -1}
+- {type: pawn, pos: f7, first_turn: -1}
+- {type: pawn, pos: g7, first_turn: -1}
+- {type: pawn, pos: h7, first_turn: -1}
+white:
+- {type: pawn, pos: a2, first_turn: -1}
+- {type: pawn, pos: b2, first_turn: -1}
+- {type: pawn, pos: c2, first_turn: -1}
+- {type: pawn, pos: d2, first_turn: -1}
+- {type: pawn, pos: e2, first_turn: -1}
+- {type: pawn, pos: f2, first_turn: -1}
+- {type: pawn, pos: g2, first_turn: -1}
+- {type: pawn, pos: h2, first_turn: -1}
+- {type: rook, pos: a1, first_turn: -1}
+- {type: knight, pos: b1, first_turn: -1}
+- {type: bishop, pos: c1, first_turn: -1}
+- {type: queen, pos: d1, first_turn: -1}
+- {type: king, pos: e1, first_turn: -1}
+- {type: bishop, pos: f1, first_turn: -1}
+- {type: knight, pos: g1, first_turn: -1}
+- {type: rook, pos: h1, first_turn: -1}

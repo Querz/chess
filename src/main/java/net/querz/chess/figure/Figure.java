@@ -74,6 +74,9 @@ public abstract class Figure implements Serializable {
 		if (graphic && firstTurn < 0) {
 			firstTurn = field.getBoard().getCurrentTurn();
 		}
+		if (graphic && (killedFigure != null || !(postFigure instanceof Pawn))) {
+			ChessGame.getBoard().set50MoveRuleTurns(0);
+		}
 		return killedFigure == null ? postFigure : killedFigure;
 	}
 

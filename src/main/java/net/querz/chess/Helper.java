@@ -8,7 +8,6 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.stream.Stream;
 
 public class Helper {
 
@@ -16,19 +15,16 @@ public class Helper {
 		return new Image(Helper.class.getClassLoader().getResourceAsStream(resource), width, height, true, true);
 	}
 
-	public static String loadStringFromFile(File file) {
-		StringBuilder sb = new StringBuilder();
-		try (Stream<String> stream = Files.lines(Paths.get(file.toURI()))) {
-			stream.forEach(sb::append);
+	public static byte[] loadDataFromFile(File file) {
+		try {
+			return Files.readAllBytes(Paths.get(file.toURI()));
 		} catch (IOException ex) {
 			ex.printStackTrace();
 			return null;
 		}
-		return sb.toString();
 	}
 
-	public static String loadStringFromResource(String resource) {
-		StringBuilder sb = new StringBuilder();
+	public static byte[] loadDataFromResource(String resource) {
 		URI uri = null;
 		try {
 			URL url = ChessIO.class.getClassLoader().getResource(resource);
@@ -41,18 +37,17 @@ public class Helper {
 		if (uri == null) {
 			return null;
 		}
-		try (Stream<String> stream = Files.lines(Paths.get(uri))) {
-			stream.forEach(sb::append);
+		try {
+			return Files.readAllBytes(Paths.get(uri));
 		} catch (IOException ex) {
 			ex.printStackTrace();
 			return null;
 		}
-		return sb.toString();
 	}
 
-	public static void saveStringToFile(String string, File file) {
+	public static void saveDataToFile(byte[] data, File file) {
 		try {
-			Files.write(Paths.get(file.toURI()), string.getBytes());
+			Files.write(Paths.get(file.toURI()), data);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

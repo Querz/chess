@@ -10,7 +10,8 @@ public class ChessBoard extends GridPane {
 	private ChessField[] fields = new ChessField[64];
 	private Map<Color, Set<ChessField>> attackedFields = new HashMap<>();
 	private int currentTurn = 1;
-	private ChessIO io;
+	private int ruleOf50 = 0;
+	private Map<String, ChessIO> io = new LinkedHashMap<>();
 
 	ChessBoard() {
 		resetAttackedFields();
@@ -53,8 +54,17 @@ public class ChessBoard extends GridPane {
 		this.currentTurn = currentTurn;
 	}
 
+	public int get50MoveRuleTurns() {
+		return ruleOf50;
+	}
+
+	public void set50MoveRuleTurns(int turns) {
+		this.ruleOf50 = turns;
+	}
+
 	void nextTurn() {
 		currentTurn++;
+		ruleOf50++;
 		recalculateAttackedFields();
 		gameStateTest();
 	}
@@ -69,16 +79,18 @@ public class ChessBoard extends GridPane {
 			if (king.isCheck()) {
 				if (king.isCheckMate()) {
 					ChessGame.displayStatusText("Check mate! " + king.getColor().revert().getFancyName() + " wins.");
+					return;
 				} else {
 					ChessGame.displayStatusText("Check! " + king.getColor().getFancyName() + " has to defend.");
+					return;
 				}
 			} else if (king.isStaleMate()) {
 				ChessGame.displayStatusText("Stalemate! " + king.getColor().getFancyName() + " can't move.");
-			} else {
-				ChessGame.displayStatusText("");
+				return;
 			}
-		} else {
-			ChessGame.displayStatusText("");
+		}
+		if (ruleOf50 >= 100) {
+			ChessGame.displayStatusText("50-move-rule applies");
 		}
 	}
 
@@ -98,7 +110,7 @@ public class ChessBoard extends GridPane {
 
 	public King getKing(Color color) {
 		for (ChessField field : fields) {
-			if (field.figure != null && field.figure instanceof King && field.figure.getColor() == color) {
+			if (field.figure instanceof King && field.figure.getColor() == color) {
 				return (King) field.figure;
 			}
 		}
@@ -123,32 +135,43 @@ public class ChessBoard extends GridPane {
 		}
 		recalculateAttackedFields();
 		currentTurn = 1;
+		ruleOf50 = 0;
 		ChessGame.displayStatusText("");
 	}
 
 	public void setIO(ChessIO io) {
-		this.io = io;
+		this.io.put(io.getFileExtension(), io);
+	}
+
+	public Map<String, ChessIO> getIO() {
+		return io;
 	}
 
 	void loadFromResource(String resource) {
-		String s = Helper.loadStringFromResource(resource);
-		load(s);
+		load(getFileExtension(resource), Helper.loadDataFromResource(resource));
 	}
 
 	public void load(File file) {
-		String s = Helper.loadStringFromFile(file);
-		load(s);
+		load(getFileExtension(file.getName()), Helper.loadDataFromFile(file));
 	}
 
-	private void load(String s) {
+	private String getFileExtension(String name) {
+		return name.substring(name.lastIndexOf('.') + 1);
+	}
+
+	private void load(String type, byte[] s) {
 		clear();
-		io.load(s, this);
+		io.get(type).load(s, this);
 		recalculateAttackedFields();
 		gameStateTest();
 	}
 
 	public void save(File file) {
-		String s = io.save(this);
-		Helper.saveStringToFile(s, file);
+		byte[] s = io.get(
+				getFileExtension(
+						file.getName()
+				))
+				.save(this);
+		Helper.saveDataToFile(s, file);
 	}
 }

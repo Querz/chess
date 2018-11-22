@@ -1,4 +1,4 @@
-package net.querz.chess.json;
+package net.querz.chess.io.json;
 
 import com.google.gson.*;
 import net.querz.chess.ChessBoard;
@@ -10,11 +10,12 @@ import net.querz.chess.figure.Figure;
 public class ChessLoader implements ChessIO {
 
 	@Override
-	public void load(String json, ChessBoard board) {
-		JsonObject element = new JsonParser().parse(json).getAsJsonObject();
+	public void load(byte[] json, ChessBoard board) {
+		JsonObject element = new JsonParser().parse(new String(json)).getAsJsonObject();
 		loadFigures(Color.BLACK, element.getAsJsonArray("black"), board);
 		loadFigures(Color.WHITE, element.getAsJsonArray("white"), board);
 		board.setCurrenTurn(element.get("current_turn").getAsInt());
+		board.set50MoveRuleTurns(element.get("50_move_rule_turns").getAsInt());
 	}
 
 	private void loadFigures(Color color, JsonArray jsonFigures, ChessBoard board) {
@@ -28,11 +29,12 @@ public class ChessLoader implements ChessIO {
 	}
 
 	@Override
-	public String save(ChessBoard board) {
+	public byte[] save(ChessBoard board) {
 		JsonObject main = new JsonObject();
 		JsonArray black = new JsonArray();
 		JsonArray white = new JsonArray();
 		main.addProperty("current_turn", board.getCurrentTurn());
+		main.addProperty("50_move_rule_turns", board.get50MoveRuleTurns());
 		for (Figure figure : board.getFigures()) {
 			JsonObject jsonFigure = new JsonObject();
 			jsonFigure.addProperty("type", figure.getName());
@@ -46,6 +48,16 @@ public class ChessLoader implements ChessIO {
 		}
 		main.add("black", black);
 		main.add("white", white);
-		return new GsonBuilder().setPrettyPrinting().create().toJson(main);
+		return new GsonBuilder().create().toJson(main).getBytes();
+	}
+
+	@Override
+	public String getFileTypeDescription() {
+		return "JSON files (*.json)";
+	}
+
+	@Override
+	public String getFileExtension() {
+		return "json";
 	}
 }

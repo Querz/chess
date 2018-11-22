@@ -7,9 +7,15 @@ sourceCompatibility = 1.8
 
 repositories {
 	mavenCentral()
+	maven {
+		url 'https://jitpack.io/'
+	}
 }
 
 dependencies {
 	compile 'com.google.code.gson:gson:2.8.0'
+	compile 'com.github.Querz:NBT:2.5'
+	compile 'stax:stax:1.2.0'
+	compile 'org.yaml:snakeyaml:1.23'
 	testCompile group: 'junit', name: 'junit', version: '4.12'
 }

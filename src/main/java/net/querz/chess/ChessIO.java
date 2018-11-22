@@ -2,7 +2,11 @@ package net.querz.chess;
 
 public interface ChessIO {
 
-	void load(String string, ChessBoard board);
+	void load(byte[] data, ChessBoard board);
 
-	String save(ChessBoard board);
+	byte[] save(ChessBoard board);
+
+	String getFileTypeDescription();
+
+	String getFileExtension();
 }

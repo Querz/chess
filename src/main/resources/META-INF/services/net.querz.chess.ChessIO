@@ -1,0 +1,5 @@
+net.querz.chess.io.json.ChessLoader
+net.querz.chess.io.bits.ChessLoader
+net.querz.chess.io.nbt.ChessLoader
+net.querz.chess.io.xml.ChessLoader
+net.querz.chess.io.yaml.ChessLoader
