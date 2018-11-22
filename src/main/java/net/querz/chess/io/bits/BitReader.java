@@ -13,7 +13,6 @@ public class BitReader extends DataInputStream {
 		super(in);
 	}
 
-	//read up to 8 bits as a byte
 	public byte readBits(int bits) throws IOException {
 		if (currentBit + bits > 8) {
 			byte localBuffer = readByte();

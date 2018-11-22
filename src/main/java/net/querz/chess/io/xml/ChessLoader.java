@@ -1,6 +1,5 @@
 package net.querz.chess.io.xml;
 
-import com.sun.xml.internal.txw2.output.IndentingXMLStreamWriter;
 import net.querz.chess.ChessBoard;
 import net.querz.chess.ChessIO;
 import net.querz.chess.FigureFactory;
