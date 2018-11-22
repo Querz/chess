@@ -49,3 +49,10 @@ Source:     https://github.com/google/gson
 License:    http://www.apache.org/licenses/LICENSE-2.0
 
 -----------------------------------------------------------------------------------
+snakeyaml is released under the Apache 2.0 License.
+
+Copyright: Andrey Somov
+Source:    https://bitbucket.org/asomov/snakeyaml
+License:   http://www.apache.org/licenses/LICENSE-2.0
+
+-----------------------------------------------------------------------------------
