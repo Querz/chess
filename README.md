@@ -19,13 +19,15 @@ A small Chess game implementing the default rules by restricting movement of fig
 
 ## Serialization and Deserialization
 
-The game can be saved and loaded using any String format. The interface [ChessIO](https://github.com/Querz/chess/blob/master/src/main/java/net/querz/chess/ChessIO.java) can be used to implement a custom format:
+The game can be saved and loaded using any format. The interface [ChessIO](https://github.com/Querz/chess/blob/master/src/main/java/net/querz/chess/ChessIO.java) can be used to implement a custom format:
 
-[ChessIO](https://github.com/Querz/chess/blob/master/src/main/java/net/querz/chess/ChessIO.java)#load(String, ChessBoard) is used to load a String (the first parameter) into the ChessBoard (the second parameter).
+[ChessIO](https://github.com/Querz/chess/blob/master/src/main/java/net/querz/chess/ChessIO.java)#load(byte[], ChessBoard) is used to load a byte[] (the first parameter) into the ChessBoard (the second parameter).
 
-[ChessIO](https://github.com/Querz/chess/blob/master/src/main/java/net/querz/chess/ChessIO.java)#save(ChessBoard) is used to serialize the current state of the ChessBoard into a String.
+[ChessIO](https://github.com/Querz/chess/blob/master/src/main/java/net/querz/chess/ChessIO.java)#save(ChessBoard) is used to serialize the current state of the ChessBoard into a byte[].
 
-There are multiple sample implementations of linear reading and loading of differend kinds of formats. Current examples include:
+To make your own implementation show up in the load / save dialog, simply implement the [ChessIO](https://github.com/Querz/chess/blob/master/src/main/java/net/querz/chess/ChessIO.java)#getFileTypeDescription() and [ChessIO](https://github.com/Querz/chess/blob/master/src/main/java/net/querz/chess/ChessIO.java)#getFileExtension() and add the complete class name to [META-INF/services/net.querz.chess.ChessIO](https://github.com/Querz/chess/blob/master/src/main/resources/META-INF/services/net.querz.chess.ChessIO).
+
+There are multiple example implementations of linear reading and writing of differend kinds of formats:
 
 | Library | Location | Description |
 | :-------: | :--------: | :------------ |
