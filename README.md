@@ -1,5 +1,5 @@
 # Chess
-Chess in Java using JavaFX and JSON
+Chess in Java to exercise the usage different serialization formats.
 
 ---
 
