@@ -1,5 +1,5 @@
 # Chess
-Chess in Java to exercise the usage different serialization formats.
+Chess in Java to exercise the usage of different serialization formats.
 
 ---
 
