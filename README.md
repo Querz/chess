@@ -11,6 +11,7 @@ A small Chess game implementing the default rules by restricting movement of fig
 - Check
 - Check mate
 - Stalemate
+- 50-moves-rule
 
 ![chess_default](https://raw.githubusercontent.com/Querz/chess/616ca78d9c6e24668c923a7b2aa6da3b76f48aa3/assets/chess_default.png)
 
@@ -24,7 +25,15 @@ The game can be saved and loaded using any String format. The interface [ChessIO
 
 [ChessIO](https://github.com/Querz/chess/blob/master/src/main/java/net/querz/chess/ChessIO.java)#save(ChessBoard) is used to serialize the current state of the ChessBoard into a String.
 
-[ChessLoader](https://github.com/Querz/chess/blob/master/src/main/java/net/querz/chess/json/ChessLoader.java) is an example implementation that uses the Google GSON library to serialize the ChessBoard into a JSON String and to deserialize a JSON String into the ChessBoard.
+There are multiple sample implementations of linear reading and loading of differend kinds of formats. Current examples include:
+
+| Library | Location | Description |
+| :-------: | :--------: | :------------ |
+| [gson](https://github.com/google/gson) | net.querz.chess.io.json | Saves and loads the game's state as JSON |
+| stax | net.querz.chess.io.xml  | Uses the StAX library to save and load xml files |
+| [snakeyaml](https://bitbucket.org/asomov/snakeyaml) | net.querz.chess.io.yaml | Uses the snakeyaml library to save and load yml files |
+| [NBT](https://github.com/Querz/NBT) | net.querz.chess.io.nbt | Uses Tags from my NBT library to save and load the game's state |
+| bits | net.querz.chess.io.bits | An absolutely minimized proprietary format to save the game's state using bit manipulation |
 
 [FigureFactory](https://github.com/Querz/chess/blob/master/src/main/java/net/querz/chess/FigureFactory.java).createFigure(Color, String, String, int) can be used to make Figures from basic data. For example:
 ```java
@@ -38,6 +47,7 @@ For serialization, the following methods will return all required information to
 
 - [ChessBoard](https://github.com/Querz/chess/blob/master/src/main/java/net/querz/chess/ChessBoard.java)#getFigures()
 - [ChessBoard](https://github.com/Querz/chess/blob/master/src/main/java/net/querz/chess/ChessBoard.java)#getCurrentTurn()
+- [ChessBoard](https://github.com/Querz/chess/blob/master/src/main/java/net/querz/chess/ChessBoard.java)#get50MoveRuleTurns()
 - [Figure](https://github.com/Querz/chess/blob/master/src/main/java/net/querz/chess/figure/Figure.java)#getName()
 - [Figure](https://github.com/Querz/chess/blob/master/src/main/java/net/querz/chess/figure/Figure.java)#getPos()
 - [Figure](https://github.com/Querz/chess/blob/master/src/main/java/net/querz/chess/figure/Figure.java)#getFirstTurn()
