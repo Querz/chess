@@ -92,6 +92,7 @@ public class ChessBoard extends GridPane {
 		if (ruleOf50 >= 100) {
 			ChessGame.displayStatusText("50-move-rule applies");
 		}
+		ChessGame.displayStatusText("");
 	}
 
 	public void recalculateAttackedFields() {
