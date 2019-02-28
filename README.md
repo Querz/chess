@@ -34,6 +34,7 @@ There are multiple example implementations of linear reading and writing of diff
 | [gson](https://github.com/google/gson) | net.querz.chess.io.json | Saves and loads the game's state as JSON |
 | stax | net.querz.chess.io.xml  | Uses the StAX library to save and load xml files |
 | [snakeyaml](https://bitbucket.org/asomov/snakeyaml) | net.querz.chess.io.yaml | Uses the snakeyaml library to save and load yml files |
+| csv | net.querz.chess.io.csv | Saves and loads the game's state as CSV files |
 | [NBT](https://github.com/Querz/NBT) | net.querz.chess.io.nbt | Uses Tags from my NBT library to save and load the game's state |
 | bits | net.querz.chess.io.bits | An absolutely minimized proprietary format to save the game's state using bit manipulation |
 
