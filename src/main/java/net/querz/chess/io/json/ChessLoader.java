@@ -31,10 +31,10 @@ public class ChessLoader implements ChessIO {
 	@Override
 	public byte[] save(ChessBoard board) {
 		JsonObject main = new JsonObject();
-		JsonArray black = new JsonArray();
-		JsonArray white = new JsonArray();
 		main.addProperty("current_turn", board.getCurrentTurn());
 		main.addProperty("50_move_rule_turns", board.get50MoveRuleTurns());
+		JsonArray black = new JsonArray();
+		JsonArray white = new JsonArray();
 		for (Figure figure : board.getFigures()) {
 			JsonObject jsonFigure = new JsonObject();
 			jsonFigure.addProperty("type", figure.getName());
