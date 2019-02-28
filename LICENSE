@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2018 Querz
+Copyright (c) 2018-present Querz
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -21,6 +21,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 -----------------------------------------------------------------------------------
+
 The above license does not apply to some images found in src/main/resources/images.
 The following list links the affected images to the corresponding license by
 providing a link to that license.
@@ -42,6 +43,9 @@ load.png           Simpleicon           https://www.flaticon.com/free-icon/folde
 swap.png           Dave Gandy           https://www.flaticon.com/free-icon/refresh-page-option_25429            https://creativecommons.org/licenses/by/3.0/
 
 -----------------------------------------------------------------------------------
+The following third party dependencies are released under these licenses:
+-----------------------------------------------------------------------------------
+
 GSON is released under the Apache 2.0 License.
 
 Copyright:  Google
@@ -49,10 +53,19 @@ Source:     https://github.com/google/gson
 License:    http://www.apache.org/licenses/LICENSE-2.0
 
 -----------------------------------------------------------------------------------
+
 snakeyaml is released under the Apache 2.0 License.
 
 Copyright: Andrey Somov
 Source:    https://bitbucket.org/asomov/snakeyaml
 License:   http://www.apache.org/licenses/LICENSE-2.0
+
+-----------------------------------------------------------------------------------
+
+BSON is released under the Apache 2.0 License.
+
+Copyright: MongoDB, Inc.
+Source: https://github.com/mongodb/mongo-java-driver/tree/master/bson
+License: http://www.apache.org/licenses/LICENSE-2.0
 
 -----------------------------------------------------------------------------------
