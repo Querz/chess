@@ -13,13 +13,15 @@ import java.io.ByteArrayOutputStream;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.util.zip.GZIPInputStream;
+import java.util.zip.GZIPOutputStream;
 
 public class ChessLoader implements ChessIO {
 
 	@Override
 	public void load(byte[] data, ChessBoard board) {
 		ByteArrayInputStream bais = new ByteArrayInputStream(data);
-		try (DataInputStream dis = new DataInputStream(bais)) {
+		try (DataInputStream dis = new DataInputStream(new GZIPInputStream(bais))) {
 			CompoundTag root = (CompoundTag) Tag.deserialize(dis, 0);
 			loadFigures(Color.BLACK, root.getListTag("black").asCompoundTagList(), board);
 			loadFigures(Color.WHITE, root.getListTag("white").asCompoundTagList(), board);
@@ -61,7 +63,7 @@ public class ChessLoader implements ChessIO {
 		root.put("black", black);
 		root.put("white", white);
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
-		try (DataOutputStream dos = new DataOutputStream(baos)) {
+		try (DataOutputStream dos = new DataOutputStream(new GZIPOutputStream(baos))) {
 			root.serialize(dos, 0);
 		} catch (IOException ex) {
 			ex.printStackTrace();
