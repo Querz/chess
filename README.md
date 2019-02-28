@@ -35,7 +35,8 @@ There are multiple example implementations of linear reading and writing of diff
 | stax | net.querz.chess.io.xml  | Uses the StAX library to save and load xml files |
 | [snakeyaml](https://bitbucket.org/asomov/snakeyaml) | net.querz.chess.io.yaml | Uses the snakeyaml library to save and load yml files |
 | csv | net.querz.chess.io.csv | Saves and loads the game's state as CSV files |
-| [NBT](https://github.com/Querz/NBT) | net.querz.chess.io.nbt | Uses Tags from my NBT library to save and load the game's state |
+| [NBT](https://github.com/Querz/NBT) | net.querz.chess.io.nbt | Uses Tags from my NBT library to load from and save the game's state to gzip compressed NBT files |
+| [BSON](https://github.com/mongodb/mongo-java-driver/tree/master/bson) | net.querz.chess.io.bson | Loads from and saves the game's state to gzip compressed BSON encoded files |
 | bits | net.querz.chess.io.bits | An absolutely minimized proprietary format to save the game's state using bit manipulation |
 
 [FigureFactory](https://github.com/Querz/chess/blob/master/src/main/java/net/querz/chess/FigureFactory.java).createFigure(Color, String, String, int) can be used to make Figures from basic data. For example:
