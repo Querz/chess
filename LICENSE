@@ -65,7 +65,7 @@ License:   http://www.apache.org/licenses/LICENSE-2.0
 BSON is released under the Apache 2.0 License.
 
 Copyright: MongoDB, Inc.
-Source: https://github.com/mongodb/mongo-java-driver/tree/master/bson
-License: http://www.apache.org/licenses/LICENSE-2.0
+Source:    https://github.com/mongodb/mongo-java-driver/tree/master/bson
+License:   http://www.apache.org/licenses/LICENSE-2.0
 
 -----------------------------------------------------------------------------------
