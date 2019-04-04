@@ -5,3 +5,4 @@ net.querz.chess.io.xml.ChessLoader
 net.querz.chess.io.yaml.ChessLoader
 net.querz.chess.io.csv.ChessLoader
 net.querz.chess.io.bson.ChessLoader
+net.querz.chess.io.ini.ChessLoader
