@@ -55,12 +55,14 @@ public class ChessGame extends Application {
 		if (godmode) {
 			options.add(new OptionButton(
 					"images/clear.png",
-					e -> board.clear()),
+					e -> board.clear(),
+					"Clear"),
 					0, 0, 1, 1
 			);
 			options.add(new OptionButton(
 					"images/swap.png",
-					e -> board.nextTurn()),
+					e -> board.nextTurn(),
+					"Skip turn"),
 					1, 0, 1, 1
 			);
 		}
@@ -69,7 +71,8 @@ public class ChessGame extends Application {
 				e -> {
 					board.clear();
 					board.loadFromResource("init.json");
-				}),
+				},
+				"Reset"),
 				2, 0, 1, 1
 		);
 		options.add(new OptionButton(
@@ -79,7 +82,8 @@ public class ChessGame extends Application {
 					if (file != null) {
 						board.save(file);
 					}
-				}),
+				},
+				"Save"),
 				3, 0, 1, 1
 		);
 		options.add(new OptionButton(
@@ -89,7 +93,8 @@ public class ChessGame extends Application {
 					if (file != null) {
 						board.load(file);
 					}
-				}),
+				},
+				"Load"),
 				4, 0, 1, 1
 		);
 		menu.setRight(options);
