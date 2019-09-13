@@ -116,7 +116,7 @@ public class ChessGame extends Application {
 
 		//set IO and load initial setup
 		ServiceLoader.load(ChessIO.class).forEach(board::setIO);
-		board.loadFromResource("init.chess");
+		board.loadFromResource("init.json");
 	}
 
 	private Label newRowLabel(int i) {

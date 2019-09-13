@@ -48,23 +48,23 @@ public class FigureFactory {
 		}
 		Figure f;
 		switch (type) {
-			case 1:
+			case 0b0:
+				f = new Pawn(color, ChessGame.getBoard().getField(x, y));
+				break;
+			case 0b100:
 				f = new Rook(color, ChessGame.getBoard().getField(x, y));
 				break;
-			case 2:
+			case 0b101:
 				f = new Knight(color, ChessGame.getBoard().getField(x, y));
 				break;
-			case 3:
+			case 0b110:
 				f = new Bishop(color, ChessGame.getBoard().getField(x, y));
 				break;
-			case 4:
+			case 0b1110:
 				f = new Queen(color, ChessGame.getBoard().getField(x, y));
 				break;
-			case 5:
+			case 0b1111:
 				f = new King(color, ChessGame.getBoard().getField(x, y));
-				break;
-			case 0:
-				f = new Pawn(color, ChessGame.getBoard().getField(x, y));
 				break;
 			default:
 				throw new IllegalArgumentException("Unknown Figure: \"" + type + "\"");
@@ -75,17 +75,17 @@ public class FigureFactory {
 
 	public static int getFigureID(Figure f) {
 		if (f instanceof Pawn)
-			return 0;
+			return 0b0;
 		if (f instanceof Rook)
-			return 1;
+			return 0b100;
 		if (f instanceof Knight)
-			return 2;
+			return 0b101;
 		if (f instanceof Bishop)
-			return 3;
+			return 0b110;
 		if (f instanceof Queen)
-			return 4;
+			return 0b1110;
 		if (f instanceof King)
-			return 5;
+			return 0b1111;
 		return 0;
 	}
 }
