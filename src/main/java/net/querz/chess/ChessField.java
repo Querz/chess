@@ -41,6 +41,8 @@ public class ChessField extends Label {
 		setOnDragOver(this::onDragOver);
 		setOnDragDropped(this::onDragDropped);
 		setOnDragDone(this::onDragDone);
+		setOnMouseEntered(e -> onMouseEntered());
+		setOnMouseExited(e -> onMouseExited());
 		if (ChessGame.isGodmode()) {
 			setContextMenu(new GodmodeMenu(this));
 		}
@@ -100,6 +102,26 @@ public class ChessField extends Label {
 
 	public int getY() {
 		return y;
+	}
+
+	private void onMouseEntered() {
+		List<ChessField> trueFields;
+		if (figure != null && figure.canMove() && (trueFields = figure.getAllAccessibleFields()).size() > 0) {
+			for (ChessField field : trueFields) {
+				if (field.figure != null || field.isEnPassantField(figure)) {
+					field.setHighlightKill();
+				} else {
+					field.setHighlightEmpty();
+				}
+			}
+		}
+	}
+
+	private void onMouseExited() {
+		List<ChessField> trueFields;
+		if (figure != null && figure.canMove() && (trueFields = figure.getAllAccessibleFields()).size() > 0) {
+			trueFields.forEach(ChessField::resetBackgroundColor);
+		}
 	}
 
 	private void onDragDetected(MouseEvent e) {
